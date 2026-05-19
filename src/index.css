@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-pale-yellow: #fef9e7;
+  --color-lavender: #dddaf8;
+  --color-lavender-dark: #b8b5ee;
+  --color-accent: #7c6fff;
+  --color-accent-soft: #a99fff;
+  --color-bg: #f0eef8;
+  --color-bg-dark: #e4e1f5;
+  --color-text-main: #1a1a2e;
+  --color-text-light: #5a5a7a;
+  --color-card: rgba(255, 255, 255, 0.65);
+  
+  /* Background */
+  --bg-gradient: radial-gradient(ellipse at 10% 40%, rgba(200, 195, 255, 0.6), transparent 55%), 
+                 radial-gradient(ellipse at 90% 20%, rgba(254, 249, 231, 0.7), transparent 55%), 
+                 #ece9f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(130, 130, 170, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 32px;
+  box-shadow: 0 12px 40px rgba(130, 130, 170, 0.08);
+}
+
+/* Claymorphism Utilities */
+.clay {
+  background: var(--color-white);
+  border-radius: 28px;
+  box-shadow: 
+    10px 10px 24px rgba(180, 180, 200, 0.15),
+    -10px -10px 24px rgba(255, 255, 255, 0.9),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.9),
+    inset -4px -4px 10px rgba(180, 180, 200, 0.05);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.clay:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    16px 16px 32px rgba(180, 180, 200, 0.18),
+    -16px -16px 32px rgba(255, 255, 255, 0.95),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.9),
+    inset -4px -4px 10px rgba(180, 180, 200, 0.05);
+}
+
+.clay-button {
+  background: linear-gradient(135deg, var(--color-white), var(--color-lavender));
+  color: var(--color-text-main);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.8);
+  cursor: pointer;
+  box-shadow: 
+    8px 8px 16px rgba(180, 180, 200, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 6px rgba(180, 180, 200, 0.08);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.clay-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    12px 12px 20px rgba(180, 180, 200, 0.2),
+    -12px -12px 20px rgba(255, 255, 255, 1);
+}
+
+.clay-button:active {
+  box-shadow: 
+    inset 6px 6px 10px rgba(180, 180, 200, 0.1),
+    inset -6px -6px 10px rgba(255, 255, 255, 1);
+  transform: translateY(2px);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

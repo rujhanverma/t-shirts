@@ -1,0 +1,39 @@
+# DEKIT: Premium Shirts Web Application
+
+The goal is to build a premium website for "DEKIT", a business selling classic shirts. The website will feature a unique visual style combining a white, pale yellow, and lavender theme with glassmorphism and claymorphism effects, highlighted by a dynamic 3D/4D tesseract shirt viewer.
+
+## User Review Required
+> [!IMPORTANT]
+> The design calls for a highly specialized "switching of shirts on tesseract" 3D/4D view. I will implement a dynamic wireframe Tesseract (4D hypercube) using `Three.js` via `@react-three/fiber`, where the different shirts (generated via AI for demo purposes) will rotate and switch at the focal points of the tesseract. 
+> Please review if this approach meets your vision for the "3D + 4D view".
+
+## Proposed Changes
+
+### 1. Project Initialization & Dependencies
+- Construct a new Vite + React application in `c:\Users\Lenovo\Desktop\Shirts_buissness`.
+- Install 3D libraries: `three`, `@react-three/fiber`, `@react-three/drei`.
+- Install animation libraries: `framer-motion` for smooth UI transitions.
+
+### 2. Design System (CSS)
+- Construct Vanilla CSS for premium aesthetic.
+- Variables for theme:
+  - `--bg-primary`: White
+  - `--color-pale-yellow`: Pale Yellow (#FFF9C4 or similar)
+  - `--color-lavender`: Lavender (#E6E6FA or similar)
+- Glassmorphism classes: translucent backgrounds with `backdrop-filter: blur()`.
+- Claymorphism classes: soft, extruded UI elements with dual inner shadows.
+
+### 3. Image Generation
+- Generate high-quality images of premium classic shirts using AI to act as the items displayed in the Tesseract viewer.
+
+### 4. Components Structure
+- **App Setup**: Main entry with routing or single-page scrolling structure.
+- **Header**: Navigation with glassmorphism effect.
+- **Hero/TesseractViewer**: The core 3D scene displaying the hypercube and rotating shirt items.
+- **Product Gallery**: Supplemental classic product grid displaying claymorphic cards.
+- **Footer**: Simple stylish footer.
+
+## Verification Plan
+### Automated & Manual Verification
+- Will start the development server (`npm run dev`).
+- We can verify the appearance of the generated UI layout, glassmorphic elements, and 3D scenes inside the browser.
